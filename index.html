@@ -1,88 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clickable Cards</title>
-  <style>
-    .cards-list {
-      z-index: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updates Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
 
-    .card {
-      margin: 30px auto;
-      width: 300px;
-      height: 300px;
-      border-radius: 40px;
-      box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-      cursor: pointer;
-      transition: 0.4s;
-      text-decoration: none;
-      color: inherit;
-      position: relative; /* Add position relative for absolute positioning */
-    }
+        .update-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
 
-    .card .card_image {
-      width: inherit;
-      height: inherit;
-      border-radius: 40px;
-    }
+        .update {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            text-decoration: none; /* Remove underline from links */
+            color: inherit; /* Ensure text color matches the rest of the page */
+            transition: background-color 0.3s, border-color 0.3s;
+        }
 
-    .card .card_image img {
-      width: inherit;
-      height: inherit;
-      border-radius: 40px;
-      object-fit: cover;
-    }
+        .update:hover {
+            background-color: #e0e0e0;
+            border-color: #ccc;
+        }
 
-    .card .card_title {
-      text-align: center;
-      font-family: sans-serif;
-      font-weight: bold;
-      font-size: 20px; /* Reduce font size */
-      position: absolute; /* Position the title absolutely */
-      bottom: 20px; /* Adjust bottom spacing */
-      left: 0;
-      right: 0;
-      color: white; /* Change text color */
-    }
+        .update-icon {
+            width: 70px;
+            height: 70px;
+            margin-right: 30px;
+            border-radius: 50%;
+        }
 
-    .card:hover {
-      transform: scale(0.9, 0.9);
-      box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22);
-    }
+        .update-content {
+            flex-grow: 1;
+        }
 
-    @media all and (max-width: 500px) {
-      .cards-list {
-        flex-direction: column;
-      }
-    }
-  </style>
+        .update-title {
+            margin: 0;
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .update-subtitle {
+            margin: 10px 0 0;
+            font-size: 1.8em;
+            color: #777;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .update {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .update-icon {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .update-title {
+                font-size: 2em;
+            }
+
+            .update-subtitle {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .update-container {
+                padding: 10px;
+            }
+
+            .update {
+                padding: 15px;
+                flex-direction: row; /* Move image to the left side */
+            }
+
+            .update-title {
+                font-size: 1.5em; /* Smaller font size for title */
+            }
+
+            .update-subtitle {
+                font-size: 1.2em; /* Smaller font size for subtitle */
+            }
+
+            .update-icon {
+                width: 50px;
+                height: 50px;
+                margin-right: 20px; /* Adjusted margin for smaller screen */
+                margin-bottom: 10px; /* Add margin bottom for spacing */
+            }
+        }
+    </style>
 </head>
 <body>
-
-<div class="cards-list">
-  
-  <a href="https://drive.google.com/file/d/1oxWgQXGJu-0wsUOQDNTDs1vb60LRWEL6/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="card">
-    <div class="card_image"> <img src="https://scontent.fccj1-1.fna.fbcdn.net/v/t39.30808-6/414113200_1051626016165072_3528866268254488879_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=hW5plCGAbQ8Q7kNvgGsHeMB&_nc_ht=scontent.fccj1-1.fna&oh=00_AYDRVghHQQyyHlWH0UevtMsS3yIhggjXEsBmHfgVX_tbEw&oe=6658AF3F" /> </div>
-    <div class="card_title title-white">
-      Version 1.1.0
+    <div class="update-container">
+        <a href="https://www.instagram.com" class="update">
+            <img src="https://play-lh.googleusercontent.com/wdCnlJMmDz-A_kiAXzNI9sf2tIS5h4b5TGAocWTUKmxze288dSKv9xM6AhrPg_v2se_E" alt="Icon 1" class="update-icon">
+            <div class="update-content">
+                <h2 class="update-title">Update Title 1</h2>
+                <p class="update-subtitle">This is the subtitle for update 1.</p>
+            </div>
+        </a>
+        <a href="https://www.instagram.com" class="update">
+            <img src="https://play-lh.googleusercontent.com/wdCnlJMmDz-A_kiAXzNI9sf2tIS5h4b5TGAocWTUKmxze288dSKv9xM6AhrPg_v2se_E" alt="Icon 2" class="update-icon">
+            <div class="update-content">
+                <h2 class="update-title">Update Title 2</h2>
+                <p class="update-subtitle">This is the subtitle for update 2.</p>
+            </div>
+        </a>
+        <!-- Add more updates as needed -->
     </div>
-  </a>
-
-  <a href="#" target="_blank" rel="noopener noreferrer" class="card">
-    <div class="card_image"> <img src="https://scontent.fccj1-1.fna.fbcdn.net/v/t39.30808-6/414113200_1051626016165072_3528866268254488879_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=hW5plCGAbQ8Q7kNvgGsHeMB&_nc_ht=scontent.fccj1-1.fna&oh=00_AYDRVghHQQyyHlWH0UevtMsS3yIhggjXEsBmHfgVX_tbEw&oe=6658AF3F" /> </div>
-    <div class="card_title title-white">
-      Version 1.0.0
-    </div>
-  </a>
-  <!-- Add more cards with similar structure -->
-
-</div>
-
 </body>
 </html>
