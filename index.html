@@ -3,169 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Started and Notifications</title>
-  <style>
-    /* Global styles */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #002244;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-/* Container styles */
-.container, .bottom-container {
-    background-color: rgba(0, 34, 68, 0.8);
-    border-radius: 20px;
-    border: 2px solid #4682B4;
-    padding: 40px 20px;
-    color: white;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    max-width: 600px;
-    width: 90%;
-    margin-bottom: 20px;
-}
-
-.container::before, .bottom-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 300px;
-    height: 300px;
-    background: linear-gradient(45deg, #003366, #0055cc);
-    clip-path: polygon(100% 0, 100% 100%, 0 100%);
-    z-index: 0;
-}
-
-.content {
-    z-index: 1;
-    position: relative;
-}
-
-h1, h2 {
-    margin: 0 0 20px 0;
-}
-
-h1 {
-    font-size: 2.5em;
-}
-
-h2 {
-    font-size: 2em;
-}
-
-p {
-    margin: 20px 0;
-}
-
-/* Highlight class */
-.highlight {
-    color: #4682B4;
-}
-
-/* Notification styles */
-.notification {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: left;
-    margin: 10px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s, background-color 0.2s;
-}
-
-.notification:hover {
-    transform: scale(1.02);
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.notification-content {
-    text-align: left;
-}
-
-.notification-title {
-    margin: 0;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.notification-subtitle {
-    margin: 10px 0;
-    font-size: 1.2em;
-}
-
-.notification-version {
-    margin: 0;
-    font-size: 1em;
-    color: #ddd;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2em;
-    }
-    .notification-content {
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.5em;
-    }
-    p {
-        font-size: 0.9em;
-    }
-    .notification-title {
-        font-size: 1.3em;
-    }
-    .notification-subtitle {
-        font-size: 1.1em;
-    }
-    .notification-version {
-        font-size: 0.9em;
-    }
-}
-
-  </style>
-  </head>
+    <title>Roadmap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <main class="container">
-        <section class="content">
-            <h1>How Do I Update The App</h1>
-            <p><strong>
-              To update the App check my Instagram bio. check for latest update</strong></p>
-            <p><strong><span class="highlight">Need assistance</span> or encountering <span class="highlight">issues</span> with updating the app Contact me on Instagram</strong></p>
-        </section>
-    </main>
-
-    <section class="bottom-container">
-        <div class="content">
-            <h2>What's New?</h2>
-            <article class="notification">
-                <div class="notification-content">
-                    <h3 class="notification-title">Version 1.1.0</h3>
-                    <p class="notification-subtitle">New Feature: Display User Name.</p>
-                    <p class="notification-version">Now, your name will be prominently displayed on the home screen, making your experience more personalized and engaging.</p>
-                </div>
-            </article>
-            <article class="notification">
-                <div class="notification-content">
-                    <h3 class="notification-title">Previous Version: 1.0.0</h3>
-                    <p class="notification-subtitle">Bug Fixes</p>
-                    <p class="notification-version">Enhanced the overall stability and performance of the application.</p>
-                </div>
-            </article>
-            <!-- Add more notifications as needed -->
+    <h1>Roadmap</h1>
+    <section class="timeline">
+        <div class="timeline-item">
+            <h3>March 2024</h3>
+            <ul>
+                <li>Basic game</li>
+                <li>Mining updates</li>
+                <li>Earn tasks</li>
+            </ul>
+        </div>
+        <div class="timeline-item">
+            <h3>April 2024</h3>
+            <ul>
+                <li>Referral system</li>
+                <li>LVL ratings</li>
+                <li>Daily rewards</li>
+            </ul>
+        </div>
+        <div class="timeline-item">
+            <h3>May 2024</h3>
+            <ul>
+                <li>Special cards</li>
+                <li>Daily Combo</li>
+                <li>Partner blockchain announcement</li>
+            </ul>
         </div>
     </section>
 </body>
 </html>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.timeline {
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.timeline-item:after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 100%;
+    background-color: #ddd;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+.timeline-item:before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #616161;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 0;
+}
+
+.timeline-item h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+</style>
