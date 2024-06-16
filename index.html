@@ -4,85 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roadmap</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Roadmap</h1>
-    <section class="timeline">
-        <div class="timeline-item">
-            <h3>March 2024</h3>
+    <div class="roadmap">
+        <h1>Roadmap</h1>
+        <div class="month">
+            <h2>March 2024</h2>
             <ul>
                 <li>Basic game</li>
                 <li>Mining updates</li>
                 <li>Earn tasks</li>
             </ul>
         </div>
-        <div class="timeline-item">
-            <h3>April 2024</h3>
+        <div class="month">
+            <h2>April 2024</h2>
             <ul>
                 <li>Referral system</li>
                 <li>LVL ratings</li>
                 <li>Daily rewards</li>
             </ul>
         </div>
-        <div class="timeline-item">
-            <h3>May 2024</h3>
+        <div class="month">
+            <h2>May 2024</h2>
             <ul>
                 <li>Special cards</li>
                 <li>Daily Combo</li>
-                <li>Partner blockchain announcement</li>
+                <li>«Partner» blockchain announcement</li>
             </ul>
         </div>
-    </section>
+    </div>
 </body>
 </html>
 <style>
-
 body {
     font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 20px;
 }
 
-.timeline {
-    position: relative;
-    list-style: none;
-    padding: 0;
+.roadmap {
+    text-align: center;
 }
 
-.timeline-item {
-    position: relative;
+.roadmap h1 {
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-.timeline-item:after {
-    content: "";
-    display: block;
-    width: 10px;
-    height: 100%;
-    background-color: #ddd;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
+.month {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.timeline-item:before {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #616161;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    top: 0;
+.month h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #ccc;
 }
 
-.timeline-item h3 {
-    margin: 10px 0 5px;
-    font-size: 18px;
+.month ul {
+    list-style-type: none;
+    padding: 0;
 }
 
+.month ul li {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
 </style>
