@@ -14,10 +14,14 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .roadmap {
             text-align: center;
+            width: 100%;
+            max-width: 400px;
         }
 
         .roadmap h1 {
@@ -31,7 +35,6 @@
             border-radius: 15px;
             padding: 20px;
             margin-bottom: 20px;
-            width: 350px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             position: relative;
         }
@@ -64,6 +67,42 @@
             font-size: 1.2em;
             margin: 10px 0;
             color: #cccccc;
+        }
+
+        @media (max-width: 768px) {
+            .roadmap h1 {
+                font-size: 2.5em;
+            }
+
+            .month h2 {
+                font-size: 1.6em;
+            }
+
+            .month ul li {
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .roadmap h1 {
+                font-size: 2em;
+            }
+
+            .month h2 {
+                font-size: 1.4em;
+            }
+
+            .month ul li {
+                font-size: 1em;
+            }
+
+            .month {
+                padding: 15px;
+            }
+
+            .month::before {
+                width: 4px;
+            }
         }
     </style>
 </head>
